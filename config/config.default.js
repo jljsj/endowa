@@ -35,7 +35,7 @@ module.exports = appInfo => {
       env: {
         APP_ROOT: path.join(__dirname, '../app/web'),
         BROWSER: 'none',
-        SOCKET_SERVER: 'http://127.0.0.1:{port}',
+        SOCKET_SERVER: 'http://localhost:{port}',
       },
       debug: true,
     },
@@ -49,7 +49,7 @@ module.exports = appInfo => {
     // 单数据库信息配置
     client: {
       // host
-      host: '127.0.0.1',
+      host: 'localhost',
       // 端口号
       port: '3306',
       // 用户名
