@@ -15,6 +15,5 @@ typings/
 .umi
 .vscode
 
-app/public
 config/manifest.json
 app/web/.temp
