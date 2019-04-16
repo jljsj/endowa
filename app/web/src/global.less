@@ -1,0 +1,105 @@
+@import "~antd/lib/style/v2-compatible-reset.less";
+@import "~antd/lib/style/themes/default.less";
+@import '~antd/lib/input/style/index.css';
+@import '~antd/lib/breadcrumb/style/index.css';
+@import '~ant-design-pro/lib/PageHeader/style/index.css';
+@import '~ant-design-pro/lib/Exception/style/index.css';
+@import '~braft-editor/dist/index.css';
+@import '~rc-texty/assets/index.css';
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.page-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .page {
+    height: 100%;
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+    will-change: transform;
+  }
+
+  .title-wrapper>h1,
+  >h1 {
+    font-size: 32px;
+    color: @text-color;
+    margin-bottom: 16px;
+  }
+
+  .title-wrapper {
+    margin: 0 auto 64px;
+    text-align: center;
+  }
+}
+
+.page {
+  padding: 56px 24px;
+}
+
+.content-wrapper {
+  position: relative;
+  min-height: 500px;
+}
+.content-wrapper >.tween-one-leaving,
+.page-content >.tween-one-leaving {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+}
+
+
+
+// 详细页图片或框框的样式;
+.page-shadow() {
+  box-shadow: 0 5px 8px @shadow-color;
+}
+
+.page-pro() {
+  transform: translateY(0);
+  transition: transform .3s @ease-out, box-shadow .3s @ease-out;
+  &:hover {
+    .page-shadow();
+    transform: translateY(-5px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ant-col-sm-100 {
+    display: block;
+    width: 20%;
+  }
+}

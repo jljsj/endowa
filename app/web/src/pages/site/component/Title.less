@@ -1,0 +1,59 @@
+.wrapper {
+  width: 500px;
+  position: relative;
+  margin: 0 auto 56px;
+
+  h2,
+  h3 {
+    width: 260px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: #0D1A26;
+    margin-bottom: 2px;
+  }
+
+  h3 {
+    font-size: 12px;
+    line-height: 20px;
+    color: #314659;
+    transform: scale(0.75)
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 120px;
+    height: 1px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #CED4D9;
+  }
+
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
+
+@media only screen and (max-width: 767.99px) {
+  .wrapper {
+    width: 80%;
+
+    &:before,
+    &:after {
+      width: 56px;
+    }
+  }
+}

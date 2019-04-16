@@ -1,0 +1,18 @@
+@import "~antd/lib/style/themes/default.less";
+
+@shadow-color: fade(#000, 30);
+
+// 详细页图片或框框的样式;
+.page-shadow() {
+  box-shadow: 0 5px 8px @shadow-color;
+}
+
+.page-pro() {
+  transform: translateY(0);
+  transition: transform .3s @ease-out, box-shadow .3s @ease-out;
+
+  &:hover {
+    .page-shadow();
+    transform: translateY(-5px);
+  }
+}

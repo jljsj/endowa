@@ -1,0 +1,23 @@
+.header {
+  background: #fff;
+  padding: 0;
+  box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  position: relative;
+  z-index: 1;
+}
+.right {
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  .back, .user {
+    display: inline-block;
+    padding: 0 16px;
+    transition: background .3s;
+    &:hover {
+      background: rgba(0,0,0,.025);
+    }
+  }
+  .back {
+    color: rgba(0, 0, 0, 0.65);
+  }
+}

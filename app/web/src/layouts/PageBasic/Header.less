@@ -1,0 +1,190 @@
+@import "~antd/lib/style/themes/default.less";
+
+.header {
+  height: 72px;
+  line-height: 72px;
+  color: @text-color;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-bottom: 1px solid fade(#fff, 35);
+  position: absolute !important;
+  z-index: 10;
+  transition: border .45s;
+
+  .page {
+    padding: 0 24px;
+  }
+}
+
+.home {
+  border-bottom: none;
+}
+
+.news {
+  box-shadow: 0 8px 24px #EBEDF0;
+
+  :global {
+    .ant-menu-horizontal .ant-menu-item {
+      a {
+        color: #697B8C;
+
+        &:hover,
+        &:active {
+          color: #2242BE;
+        }
+      }
+
+      &:hover,
+      &.ant-menu-item-selected {
+        a {
+          color: #2242BE
+        }
+
+        &:after {
+          background: #2242BE;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  height: 72px;
+  line-height: 72px;
+  width: 95px;
+  display: inline-block;
+  position: relative;
+}
+
+.navWrapper {
+  float: right;
+}
+
+:global {
+  .ant-menu-horizontal {
+    line-height: 72px;
+    border-bottom: none;
+    background: transparent;
+
+    .ant-menu-item {
+      border: none !important;
+      vertical-align: top;
+      top: 0;
+      margin-top: 0;
+
+      >a {
+        color: fade(#fff, 75);
+        transition: color .3s @ease-base-out;
+
+        &:active,
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: transparent;
+        transition: background .3s @ease-base-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+
+      &:hover,
+      &.ant-menu-item-selected {
+        &:after {
+          background: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.99px) {
+  .navWrapper {
+    height: 100%l
+  }
+
+  .mobileNav {
+    padding: 32px 0 0;
+  }
+
+  .mobileNavBar {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 1;
+
+    .bar {
+      width: 16px;
+      height: 2px;
+      background: #fff;
+      display: block;
+      border-radius: 2px;
+      transition: background .3s @ease-in-out;
+
+      &:after,
+      &:before {
+        content: '';
+        background: #fff;
+        width: 100%;
+        height: 2px;
+        display: block;
+        position: absolute;
+        border-radius: 2px;
+        transition: transform .3s @ease-in-out;
+        transform-origin: 0;
+      }
+
+      &:after {
+        transform: translateY(6px);
+      }
+
+      &:before {
+        transform: translateY(-6px);
+      }
+    }
+  }
+
+  .news {
+    .mobileNavBar {
+      .bar {
+        background: #697B8C;
+
+        &:after,
+        &:before {
+          background: #697B8C;
+        }
+      }
+    }
+
+  }
+
+  .open {
+    .mobileNavBar {
+      .bar {
+        background: transparent;
+
+        &:after {
+          transform: rotate(-45deg) translate(-2px, 6px);
+        }
+
+        &:before {
+          transform: rotate(45deg) translate(-2px, -6px);
+        }
+      }
+    }
+  }
+}

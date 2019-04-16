@@ -1,0 +1,86 @@
+{
+  "name": "endowa",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "egg": {
+    "declarations": true
+  },
+  "dependencies": {
+    "ant-design-pro": "^2.2.1",
+    "antd": "^3.15.0",
+    "await-stream-ready": "^1.0.1",
+    "braft-editor": "^2.2.9",
+    "classnames": "^2.2.6",
+    "egg": "^2.15.1",
+    "egg-mysql": "^3.0.0",
+    "egg-scripts": "^2.11.0",
+    "egg-view-assets": "^1.0.0",
+    "egg-view-nunjucks": "^2.2.0",
+    "enquire-js": "^0.2.1",
+    "md5": "^2.2.1",
+    "qs": "^6.6.0",
+    "rc-drawer": "^1.7.8",
+    "rc-queue-anim": "^1.6.12",
+    "rc-scroll-anim": "^2.5.6",
+    "rc-texty": "^0.2.0",
+    "rc-tween-one": "^2.3.4",
+    "react-document-title": "^2.0.3",
+    "react-slick": "^0.23.2",
+    "stream-wormhole": "^1.1.0",
+    "umi-request": "^1.0.5"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.1.0",
+    "babel-eslint": "^8.1.2",
+    "babel-plugin-dva-hmr": "^0.4.1",
+    "babel-plugin-import": "^1.6.3",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "egg-bin": "^4.3.7",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.15.0",
+    "enzyme": "^3.9.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-config-egg": "^7.0.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-babel": "^5.1.0",
+    "eslint-plugin-compat": "^2.6.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-markdown": "^1.0.0-beta.6",
+    "eslint-plugin-react": "^7.11.1",
+    "mockjs": "^1.0.1-beta3",
+    "redbox-react": "^1.5.0",
+    "umi": "^2.1.2",
+    "umi-plugin-ga": "^1.1.3",
+    "umi-plugin-react": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-endowa --env prod",
+    "stop": "egg-scripts stop --title=egg-server-endowa",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "build": "APP_ROOT=$PWD/app/web umi build",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "sync": "./script/sync.js"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "",
+  "license": "MIT"
+}
