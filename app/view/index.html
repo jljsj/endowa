@@ -14,10 +14,13 @@
 .load {
   width: 100vw;
   height: 100vh;
-  font-size: 24px;
+  font-size: 18px;
   text-align: center;
   margin-top: 100px;
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #root:empty + .load {
   display: block;
@@ -26,10 +29,11 @@
 </style>
 </head>
 <body>
+
+<div id="root"></div>
 <div class="load">
   加载中，请稍后...
 </div>
-<div id="root"></div>
 
 <script>
   window.routerBase = '/';
