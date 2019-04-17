@@ -21,7 +21,7 @@ class UserLayout extends React.PureComponent {
     });
     return (
       <DocumentTitle title="后台用户登入系统 - 恩都法">
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} style={{ backgroundImage: `url(${getImg('loginBg.jpg')})`}}>
           <div className={styles.loginWrapper}>
             <div className={styles.title}>
               <div className={styles.logo}>
