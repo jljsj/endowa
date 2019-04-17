@@ -18,9 +18,9 @@ export default {
           default: 'zh-CN', // default zh-CN
           baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
         },
-        /* dynamicImport: {
-          loadingComponent: './components/PageLoading/index',
-        }, */
+        dynamicImport: {
+          webpackChunkName: true,
+        },
       },
     ],
   ],
@@ -65,31 +65,4 @@ export default {
     fileName: '../../config/manifest.json',
     publicPath: '',
   },
-  chainWebpack: function (config, { webpack }) {
-    config.merge({
-      optimization: {
-        minimize: true,
-        splitChunks: {
-          chunks: 'all',
-          minSize: 30000,
-          minChunks: 3,
-          automaticNameDelimiter: '.',
-          cacheGroups: {
-            vendor: {
-              name: 'vendors',
-              test({ resource }) {
-                return /[\\/]node_modules[\\/]/.test(resource);
-              },
-              priority: 10,
-            },
-          },
-        },
-      }
-    });
-  },
-  plugins: [
-    ['umi-plugin-react', {
-      chunks: ['vendors', 'umi']
-    }]
-  ],
 };
