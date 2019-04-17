@@ -67,7 +67,7 @@
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
     "build": "APP_ROOT=$PWD/app/web umi build",
-    "builds": "cross-env NODE_ENV=production /app/web umi build",
+    "builds": "cross-env APP_ROOT=$PWD/app/web umi build",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",
     "cov": "egg-bin cov",
