@@ -19,7 +19,7 @@ export default {
           baseNavigator: true, // default true, when it is true, will use `navigator.language` overwrite default
         },
         dynamicImport: {
-          webpackChunkName: true,
+          // webpackChunkName: true,
         },
       },
     ],
