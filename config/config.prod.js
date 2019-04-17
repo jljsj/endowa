@@ -5,7 +5,7 @@ module.exports = appInfo => {
   const config = {};
   config.cluster = {
     listen: {
-      port: 80,
+      port: 8080,
     },
   };
   return config;
