@@ -1,7 +1,5 @@
 # endowa
 
-数据表格后续填上。
-
 ## QuickStart
 
 <!-- add docs here for user -->
