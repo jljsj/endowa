@@ -62,7 +62,7 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --post 80 --daemon --title=egg-server-endowa --env prod",
+    "start": "egg-scripts start --daemon --title=egg-server-endowa --env prod",
     "stop": "egg-scripts stop --title=egg-server-endowa",
     "dev": "egg-bin dev",
     "debug": "egg-bin debug",
