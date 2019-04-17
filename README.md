@@ -11,7 +11,7 @@ egg + mysql + ant design pro + umi + ant design 的一个企业型网站
 - [x] 团队成员
 - [x] 联系我们
 - [x] 后台用户管理
-- [ ]  
+
 ## 准备工作
 安装 [mysql](https://dev.mysql.com/downloads/mysql/); 然后再将 `endowa.sql` 导入到你的 mysql 数据库, 再更改 egg 的 mysql 配置, 配置完成后就可以开发使用。
 ```
