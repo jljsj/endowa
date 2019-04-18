@@ -17,4 +17,5 @@ typings/
 
 app/public/
 config/manifest.json
-app/web/.temp 
+app/web/.temp
+app/uploads
