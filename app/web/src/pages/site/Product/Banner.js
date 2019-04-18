@@ -20,7 +20,7 @@ class Banner extends React.PureComponent {
     const keys = location.pathname.split('/')
     const show = keys[keys.length - 1] === 'product'
     return classify.map(item => {
-      const productLength = (product.filter(c => c.classify === item.index.toString())).length;
+      const productLength = (product.filter(c => c.classify === item.classify.toString())).length;
       return (
         <QueueAnim component={Col} type="bottom" span={8} key={item.index} className={styles.block}>
           {show && <Link key="link" to={item.name}>
