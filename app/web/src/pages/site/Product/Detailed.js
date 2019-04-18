@@ -33,7 +33,7 @@ class Detailed extends React.PureComponent {
     const isLoading = typeof loading !== 'boolean' || loading;
     return (
       <Spin spinning={isLoading}>
-        <OverPack component={Page} className={styles.wrapper} pageClassName={styles.page}>
+        <Page className={styles.wrapper} pageClassName={styles.page}>
           <PageHeader
             onBack={this.onBack}
             title={current.name}
@@ -52,7 +52,7 @@ class Detailed extends React.PureComponent {
               </QueueAnim>
             )
           }
-        </OverPack>
+        </Page>
       </Spin>
     );
   }
