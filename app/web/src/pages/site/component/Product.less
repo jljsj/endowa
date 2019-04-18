@@ -23,6 +23,17 @@
   top: 0;
   left: 0;
   transition: transform .45s;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity .45s;
+    background: fade(#000, 30);
+  }
   &:hover {
     transform: scale(1.1);
   }
