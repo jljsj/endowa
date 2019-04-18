@@ -12,6 +12,10 @@ module.exports = appInfo => {
   const config = {};
 
   // use for cookie sign key, should change to your own and keep security
+  config.middleware = [ 'gzip' ];
+  config.gzip = {
+    threshold: 1024,
+  };
   config.keys = appInfo.name + '_1552390167884_854';
   config.view = {
     root: path.join(appInfo.baseDir, 'app/view'),
