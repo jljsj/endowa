@@ -19,6 +19,7 @@
     "egg-view-nunjucks": "^2.2.0",
     "enquire-js": "^0.2.1",
     "md5": "^2.2.1",
+    "nprogress": "^0.2.0",
     "qs": "^6.6.0",
     "rc-drawer": "^1.7.8",
     "rc-queue-anim": "^1.6.12",
@@ -73,6 +74,7 @@
     "lint": "eslint .",
     "ci": "npm run lint && npm run cov",
     "autod": "autod",
+    "analyze": "cross-env ANALYZE=1 APP_ROOT=./app/web umi build",
     "sync": "./script/sync.js"
   },
   "ci": {
