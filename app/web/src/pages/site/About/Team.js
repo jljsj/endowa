@@ -25,8 +25,7 @@ class Team extends React.PureComponent {
   render() {
     const { team } = this.props;
     return (
-      <OverPack
-        component={Page}
+      <Page
         titleProps={{
           name: '核心团队',
           nameEn: 'CORE MEMBERS',
@@ -57,7 +56,7 @@ class Team extends React.PureComponent {
             );
           })}
         </QueueAnim>
-      </OverPack>
+      </Page>
     );
   }
 }
