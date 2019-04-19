@@ -63,7 +63,7 @@ class Layout extends Component {
             <Header currentClassName={className} pathname={pathname} />
             <TweenOneGroup
               className="content-wrapper"
-              enter={{ type: 'from', opacity: 0, ease: 'easeOutQuart', onComplete: (e) => { console.log('end', e) } }}
+              enter={{ type: 'from', opacity: 0, ease: 'easeOutQuart' }}
               leave={{ opacity: 0,  ease: 'easeOutQuart' }}
             >
               <div key={pathKey ? pathname : key}>
