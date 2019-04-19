@@ -7,6 +7,10 @@ export default {
       'umi-plugin-react',
       {
         antd: true,
+        dynamicImport: {
+          webpackChunkName: true,
+          loadingComponent: './components/Loading.tsx',
+        },
         dva: {
           hmr: true,
         },
@@ -24,6 +28,28 @@ export default {
       },
     ],
   ],
+  chainWebpack(config, { webpack }) {
+    config.merge({
+      optimization: {
+        minimize: true,
+        splitChunks: {
+          chunks: 'all',
+          minSize: 30000,
+          minChunks: 3,
+          automaticNameDelimiter: '.',
+          cacheGroups: {
+            vendor: {
+              name: 'vendors',
+              test({ resource }) {
+                return /[\\/]node_modules[\\/]/.test(resource);
+              },
+              priority: 10,
+            },
+          },
+        },
+      }
+    });
+  },
   targets: {
     ie: 11,
   },

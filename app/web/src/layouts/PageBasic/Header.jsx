@@ -36,16 +36,16 @@ export default class Header extends React.Component {
     ) => (
         <Menu mode={mode || 'horizontal'} selectedKeys={[pathKey || 'home']}>
           <Item key="home">
-            <Link to="/">首页</Link>
+            <a href="/">首页</a>
           </Item>
           <Item key="product">
-            <Link to="/product">产品服务</Link>
+            <a href="/product">产品服务</a>
           </Item>
           <Item key="news">
-            <Link to="/news">业界新闻</Link>
+            <a href="/news">业界新闻</a>
           </Item>
           <Item key="about">
-            <Link to="/about">关于我们</Link>
+            <a href="/about">关于我们</a>
           </Item>
         </Menu>
       );
