@@ -26,8 +26,8 @@ module.exports = appInfo => {
 
   config.static = {
     dir: [
-      { prefix: '/public/', dir: path.join(appInfo.baseDir, 'app/public') },
-      { prefix: '/uploads', dir: path.join(appInfo.baseDir, 'app/uploads') },
+      { prefix: '/public/', dir: path.join(appInfo.baseDir, 'app/public'), gzip: true },
+      { prefix: '/uploads', dir: path.join(appInfo.baseDir, 'app/uploads'), gzip: true },
     ],
   };
 
