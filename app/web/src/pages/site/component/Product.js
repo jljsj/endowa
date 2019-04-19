@@ -10,7 +10,7 @@ import styles from './Product.less';
 
 export default class Product extends React.PureComponent {
   render() {
-    const { product, titleProps, more, ...props } = this.props;
+    const { product, titleProps, more, closeTween, ...props } = this.props;
     const child = [
       <QueueAnim
         className={styles.cardWrapper}
@@ -45,7 +45,7 @@ export default class Product extends React.PureComponent {
       </Link>
       </TweenOne>)
     ];
-    if (more) {
+    if (more || closeTween) {
       return (
         <Page
           {...props}

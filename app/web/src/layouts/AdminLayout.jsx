@@ -58,7 +58,6 @@ class AdminLayout extends Component {
     const { user, location } = nextProps;
     const { purview } = user;
     const { pathname } = location;
-    console.log(pathname)
     if (purview && pathname !== '/admin' && !pathname.match('403') && !pathname.match('dashboard')) {
       const purviewArray = purview.split(',');
       const path = pathname.split('/');

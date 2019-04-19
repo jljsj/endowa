@@ -25,7 +25,6 @@ class Service extends React.Component {
   }
 
   onChange = (v) => {
-    console.log(v)
     this.editValues = v;
   }
 

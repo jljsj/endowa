@@ -26,7 +26,7 @@ class Product extends React.PureComponent {
   }
   getProductToRender = () => {
     const { classify, product } = this.props;
-    return classify.map(item => {
+    return classify.map((item, i) => {
       const products = product.filter(c => c.classify === item.classify.toString());
       return (
         <ProductComp
@@ -34,6 +34,7 @@ class Product extends React.PureComponent {
           key={item.index.toString()}
           product={products}
           id={item.name}
+          closeTween={!i}
         />
       )
     })

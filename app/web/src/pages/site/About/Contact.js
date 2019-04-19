@@ -23,10 +23,8 @@ const t = {
 class Contact extends React.PureComponent {
   render() {
     const { contact } = this.props;
-    console.log(contact)
     const img = contact.values.find(c => c.key === 'image');
     const values = contact.values.filter(c => t[c.key]).sort((a, b) => t[a.key].v - t[b.key].v);
-    console.log(values)
     return (
       <div>
         <OverPack

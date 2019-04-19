@@ -21,7 +21,6 @@ export default {
         src: `/list/product/fetch/${payload.index}`,
         body: payload,
       });
-      console.log(response)
       yield put({
         type: 'getProductData',
         payload: response,
