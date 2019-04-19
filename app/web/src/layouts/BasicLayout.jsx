@@ -63,11 +63,12 @@ class Layout extends Component {
             <Header currentClassName={className} pathname={pathname} />
             <TweenOneGroup
               className="content-wrapper"
-              enter={{ type: 'from', opacity: 0, ease: 'easeOutQuart' }}
-              leave={{ opacity: 0, ease: 'easeOutQuart' }}
-              ref={(c) => { this.content = c; }}
+              enter={{ type: 'from', opacity: 0, ease: 'easeOutQuart', onComplete: (e) => { console.log('end', e) } }}
+              leave={{ opacity: 0,  ease: 'easeOutQuart' }}
             >
-              {React.cloneElement(this.props.children, { key: pathKey ? pathname : key })}
+              <div key={pathKey ? pathname : key}>
+                {this.props.children}
+              </div>
             </TweenOneGroup>
             <Footer />
           </div>

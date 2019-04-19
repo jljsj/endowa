@@ -13,6 +13,7 @@ run/
 typings/
 .nyc_output/
 .umi
+.umi-production
 .vscode
 
 app/public/
