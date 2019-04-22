@@ -57,7 +57,7 @@ class Layout extends Component {
     let className = key === 'index' ? 'home' : ''
     className = key === 'news' ? 'news' : className;
     return (
-      <DocumentTitle title={`${title[key]} - 恩都法 - 专注各种专业阀门制造`}>
+      <DocumentTitle title={`${title[key]} - 恩都法`}>
         <MobileContext.Provider value={this.state.isMobile}>
           <div className={className}>
             <Header currentClassName={className} pathname={pathname} />
