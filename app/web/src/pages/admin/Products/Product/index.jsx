@@ -48,7 +48,7 @@ class Product extends React.Component {
         dataIndex: 'classify',
         render: (text) => {
           const className = this.props.classify.find(item => item.classify.toString() === text);
-          return className ? className.name : text;
+          return className ? className.name : '';
         },
       },
       {

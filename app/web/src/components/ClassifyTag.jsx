@@ -28,7 +28,7 @@ class ClassifyTag extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.props.classify !== nextProps.classify) {
       this.setState({
-        values: nextProps.classify.map(item => item.index),
+        values: nextProps.classify.map(item => item.classify),
       });
     }
   }
@@ -62,7 +62,7 @@ class ClassifyTag extends React.Component {
   render() {
     const { classify } = this.props;
     const { values } = this.state
-    
+
     return (
       <div>
         <span>
@@ -75,7 +75,7 @@ class ClassifyTag extends React.Component {
               value={values}
             >
               {classify.map(item => (
-                <Option key={item.index} value={item.index}>{item.name}</Option>
+                <Option key={item.classify} value={item.classify}>{item.name}</Option>
               ))}
             </TagSelect>
           ) : '请添加分类'}

@@ -44,11 +44,11 @@ class Banner extends React.PureComponent {
           <h1>{service.name}</h1>
           <div className={styles.content} dangerouslySetInnerHTML={{ __html: service.values }} />
         </div>
-        <Page className={styles.bottomWrapper} pageClassName={styles.page}>
+        {/* <Page className={styles.bottomWrapper} pageClassName={styles.page}>
           <Row>
             {this.getClassifyToChildren()}
           </Row>
-        </Page>
+        </Page> */}
       </div>
     );
   }

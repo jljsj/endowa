@@ -33,12 +33,15 @@ class ClassifySelect extends React.Component {
   }
   render() {
     const { classify, value } = this.props;
+    console.log(value, classify)
+    const defaultValue = classify.map(c => c.classify.toString()).findIndex(c => c === value) >= 0 ?
+      value : '请选择...';
     return (
       <div>
         {classify.length ? (
-          <Select defaultValue={value} style={{ width: 120 }} onChange={this.props.onChange}>
+          <Select defaultValue={defaultValue} style={{ width: 120 }} onChange={this.props.onChange}>
             {classify.map(item => (
-              <Option key={item.index.toString()} value={item.index.toString()}>{item.name}</Option>
+              <Option key={item.classify.toString()} value={item.classify.toString()}>{item.name}</Option>
             ))}
           </Select>
         ) : '请先添加分类。'}
