@@ -4,11 +4,11 @@ import { Spin, Row, Col, Icon, Button } from 'antd';
 import Page from '../component/Page';
 import styles from './Page.less';
 
-@connect(({ classify, list, loading, routing }) => {
+@connect(({ classify, news, loading, routing }) => {
   return {
     classify: classify.data,
-    news: list.data,
-    loading: loading.effects['list/fetch'],
+    news: news.data,
+    loading: loading.effects['news/fetch'],
     location: routing.location,
   };
 })
@@ -37,7 +37,6 @@ class News extends React.Component {
     const { dispatch, location } = this.props;
     const { pageSize } = this.state;
     const payload = {
-      path: 'news',
       page: 0,
       pageSize
     };
@@ -45,7 +44,7 @@ class News extends React.Component {
       payload.classify = location.query.classify;
     }
     dispatch({
-      type: 'list/fetch',
+      type: 'news/fetch',
       payload,
     });
   }

@@ -6,6 +6,7 @@
 .timelineWrapper {
   height: 200px;
   position: relative;
+  text-align: center;
   i {
     width: 100%;
     height: 1px;
@@ -16,13 +17,18 @@
     bottom: 0;
     margin: auto;
   }
-
+  .timelineBlock {
+    display: inline-block;
+    width: 210px;
+    height: 100%;
+    position: relative;
+  }
   .top,
   .down {
     width: 210px;
     float: left;
     text-align: center;
-    position: absolute;
+    position: relative;
     height: 50%;
     &:after {
       content: '';

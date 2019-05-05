@@ -51,7 +51,7 @@ class Honor extends React.PureComponent {
           {honor.filter((c) => c.hot).filter((c, i) => i <= 2).map((item, i) => {
             return (
               <Col md={8} key={i.toString()} className={styles.card}>
-                <div className={styles.image}><img src={item.image} height="100%" /></div>
+                <div className={styles.image}><img src={item.image} width="100%" /></div>
                 <div className={styles.name}>{item.name}</div>
               </Col>
             );
@@ -79,7 +79,7 @@ class Honor extends React.PureComponent {
         <Row className={styles.modalWrapper}>
           {honor.map((item, i) => (
             <Col md={8} className={styles.modalContent} key={i.toString()}>
-              <div className={styles.image}><img src={item.image} height="100%" /></div>
+              <div className={styles.image}><img src={item.image} width="100%" /></div>
               <div className={styles.name}>{item.name}</div>
             </Col>)
           )}

@@ -1,21 +1,18 @@
 import { connect } from 'dva';
 import ProductComp from '../component/Product';
 
-@connect(({ classify, list, loading }) => {
+@connect(({ classify, product, loading }) => {
   return {
     classify: classify.data,
-    product: list.data,
-    loading: loading.effects['list/fetch'],
+    product: product.data,
+    loading: loading.effects['product/fetch'],
   };
 })
 class Product extends React.PureComponent {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'list/fetch',
-      payload: {
-        path: 'product',
-      },
+      type: 'product/fetch',
     });
     dispatch({
       type: 'classify/fetch',

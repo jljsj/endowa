@@ -41,26 +41,27 @@ class History extends React.PureComponent {
         }}
         className={styles.wrapper}
       >
-        <QueueAnim
+        <TweenOne
           className={styles.timelineWrapper}
-          type="right"
-          leaveReverse
+          animation={{ y: '+=30px', opacity: 0, type: 'from' }}
           key="queue"
         >
           <i key="i" />
           {history.filter(c => c.hot).filter((c, i) => i <= 4).map((item, i) => {
             return (
-              <div style={{ left: i * 210 }} className={!(i % 2) ? styles.top : styles.down} key={i.toString()}>
-                {!!(i % 2) && <h2 className={styles.time}>{item.time.replace(/-/g, '.')}</h2>}
-                <div className={styles.content}>{item.introduce}</div>
-                {!(i % 2) && <h2 className={styles.time}>{item.time.replace(/-/g, '.')}</h2>}
+              <div className={styles.timelineBlock} key={i.toString()}>
+                <div className={!(i % 2) ? styles.top : styles.down} >
+                  {!!(i % 2) && <h2 className={styles.time}>{item.time.replace(/-/g, '.')}</h2>}
+                  <div className={styles.content}>{item.introduce}</div>
+                  {!(i % 2) && <h2 className={styles.time}>{item.time.replace(/-/g, '.')}</h2>}
+                </div>
               </div>
             );
           })}
-        </QueueAnim>
+        </TweenOne>
         <TweenOne
           key="t"
-          animation={{ y: '+=30px', opacity: 0, type: 'from', delay: 300, ease: 'easeOutCirc' }}
+          animation={{ y: '+=30px', opacity: 0, type: 'from', delay: 100 }}
           className={styles.buttonWrapper}
         >
           <a className={styles.button} onClick={this.onShowModel}>
