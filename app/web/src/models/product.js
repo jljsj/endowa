@@ -4,6 +4,7 @@ export default {
   namespace: 'product',
   state: {
     data: [],
+    hot: [],
     currentItem: null,
   },
   effects: {
@@ -11,6 +12,15 @@ export default {
       const response = yield call(queue, { src: `/list/product/fetch`, body: { ...payload } });
       yield put({
         type: 'getProductData',
+        payload: {
+          data: response.data,
+        },
+      });
+    },
+    *fetchHot({ payload }, { call, put }) {
+      const response = yield call(queue, { src: `/list/product/fetch`, body: { ...payload } });
+      yield put({
+        type: 'getProductHotData',
         payload: {
           data: response.data,
         },
@@ -34,5 +44,12 @@ export default {
         ...payload,
       };
     },
+    getProductHotData (state, { payload }) {
+      console.log(payload)
+      return {
+        ...state,
+        hot: payload.data,
+      }
+    }
   }
 }

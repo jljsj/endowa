@@ -4,14 +4,14 @@ import Product from '../component/Product';
 
 @connect(({ product }) => {
   return {
-    product: product.data,
+    product: product.hot,
   };
 })
 class Page1 extends React.PureComponent {
   componentDidMount() {
     const { dispatch } = this.props;
     dispatch({
-      type: 'product/fetch',
+      type: 'product/fetchHot',
       payload: {
         hot: true,
         show: true,
