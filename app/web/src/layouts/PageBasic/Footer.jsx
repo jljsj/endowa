@@ -104,10 +104,10 @@ class Footer extends React.PureComponent {
             <TweenOne animation={{ y: '+=30', opacity: 0, delay: 100, type: 'from' }} className={`page ${styles.copyright}`} key="3">
               {!isMobile ? [<span key="img"><img src={getImg('record.png')} width="18" /></span>,
               <span key="a">
-                苏公网安备 3177010602009975号
+                苏公网安备 3177010602009975 号
               </span>,
               <span key="b">
-                Copyright © 2018 恩都法汽车系统有限公司 ｜ ICP证:苏D2-30140777
+                Copyright © 2019 恩都法汽车系统有限公司 ｜ 苏ICP备 19022374 号
               </span>,
               <span key="c">
                 <a>《恩都法隐私权政策》</a>
