@@ -15,8 +15,6 @@ class Page1 extends React.PureComponent {
       payload: {
         hot: true,
         show: true,
-        page: 0,
-        pageSize: 2,
       }
     })
   }
